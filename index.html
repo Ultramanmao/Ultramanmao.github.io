@@ -54,8 +54,8 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>10</b> releases</div>
-    <div class="stat"><b>10</b> pipelines documented</div>
+    <div class="stat"><b>13</b> releases</div>
+    <div class="stat"><b>12</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
   </div>
@@ -77,6 +77,9 @@
     <tr><td class="num">8</td><td>2026-07-17</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v8.0">v8.0</a></td><td>SadTalker on 8 GB: Four Python-3.13 Pitfalls That Killed a Talking Head</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">9</td><td>2026-07-18</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v9.0">v9.0</a></td><td>Wan2GP on 8 GB: The VRAM Digger That Saved My 5060 — One Trap</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">10</td><td>2026-07-19</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v10.0">v10.0</a></td><td>OpenMontage on 8 GB: The Orchestrator That Finally Made My Pipeline a Product</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">11</td><td>2026-07-19</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v11.0">v11.0</a></td><td>8 GB Pipeline Benchmark: Eleven Models, One GPU — The Definitive Comparison</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">12</td><td>2026-07-20</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v12.0">v12.0</a></td><td>Wan2.2 on 8 GB: Five Fixes to Unstick an sm_120 GPU</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">13</td><td>2026-07-20</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v13.0">v13.0</a></td><td>Z-Image Turbo on 8 GB: Is 4 Steps Enough? A 4-Step vs 20-Step Comparison</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -88,9 +91,11 @@
   <div class="pipe"><h3>Z-Image Turbo FP8 <span class="badge badge-green">Runnable</span></h3><div class="meta">High-res · <b>4 steps / 14 s</b> · 1312² · ComfyUI only</div></div>
   <div class="pipe"><h3>Flux.2 Klein 4B FP8 <span class="badge badge-green">Runnable</span></h3><div class="meta">New architecture · <b>8 steps / 1024²</b> · needs flux2-vae (128ch)</div></div>
   <div class="pipe"><h3>LTX-2B I2V <span class="badge badge-green">Runnable</span></h3><div class="meta">Text-to-video · <b>STG block=29 + strength=0.30</b> · 3-segment relay</div></div>
-  <div class="pipe"><h3>Krea 2 (Krea2Turbo) <span class="badge badge-amber">Blocked</span></h3><div class="meta">Fastest pipeline · awaiting Qwen3-VL-4B TE · 8 GB feasible w/ offload</div></div>
+  <div class="pipe"><h3>Krea 2 (Krea2Turbo) <span class="badge badge-green">Runnable</span></h3><div class="meta">Fastest pipeline · <b>89.7s / 1024² / 8 steps</b> · int8 profile 3 · 8 GB</div></div>
   <div class="pipe"><h3>SadTalker <span class="badge badge-green">Runnable</span></h3><div class="meta">Talking-head · <b>4 patches for Python 3.13</b> · ~2 min / 512² · GFPGAN optional</div></div>
   <div class="pipe"><h3>Wan2GP (v12.3) <span class="badge badge-amber">Mixed</span></h3><div class="meta">Super-app: <b>all image models ✅</b>, short video ✅, long video ❌ · Python 3.11 req'd</div></div>
+  <div class="pipe"><h3>OpenMontage + Remotion <span class="badge badge-green">Runnable</span></h3><div class="meta">Orchestrator: ComfyUI API → Remotion VideoScene → final video · <b>0 API keys</b></div></div>
+  <div class="pipe"><h3>ChatTTS <span class="badge badge-green">Runnable</span></h3><div class="meta">Local Chinese TTS · <b>RTF 0.88</b> · Chinese natural · ~6s/seg</div></div>
 </div>
 
 <h2>📅 Timeline</h2>
@@ -105,6 +110,9 @@
   <li><span class="t-date">2026-07-17</span><br><span class="t-tag">v8.0</span> SadTalker: four Python-3.13 pitfalls (basicsr, numpy 2.x, torchvision)</li>
   <li><span class="t-date">2026-07-18</span><br><span class="t-tag">v9.0</span> Wan2GP v12.3: "The VRAM Digger" — browser GPU reclamation, Python 3.11 trap, image solved on 8 GB</li>
   <li><span class="t-date">2026-07-19</span><br><span class="t-tag">v10.0</span> OpenMontage: ComfyUI API format break + Remotion assembly layer — pipeline → product</li>
+  <li><span class="t-date">2026-07-19</span><br><span class="t-tag">v11.0</span> 8 GB Benchmark: eleven pipelines, one GPU — the definitive side-by-side comparison</li>
+  <li><span class="t-date">2026-07-20</span><br><span class="t-tag">v12.0</span> Wan2.2: five fixes to unstick an sm_120 GPU — sm_120 Triton fallback root cause</li>
+  <li><span class="t-date">2026-07-20</span><br><span class="t-tag">v13.0</span> Z-Image Turbo: 4 vs 20 steps — is the distillation actually converging?</li>
 </ul>
 
 <h2>📖 About</h2>
