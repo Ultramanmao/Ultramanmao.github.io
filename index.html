@@ -54,8 +54,8 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>15</b> releases</div>
-    <div class="stat"><b>13</b> pipelines documented</div>
+    <div class="stat"><b>16</b> releases</div>
+    <div class="stat"><b>14</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
   </div>
@@ -82,6 +82,7 @@
     <tr><td class="num">13</td><td>2026-07-20</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v13.0">v13.0</a></td><td>Z-Image Turbo on 8 GB: Is 4 Steps Enough? A 4-Step vs 20-Step Comparison</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">14</td><td>2026-07-22</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v14.0">v14.0</a></td><td>8 GB Local LLM Benchmark: Five Models, Six Tests — Speed vs Size on an sm_120 GPU</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">15</td><td>2026-07-24</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v15.0">v15.0</a></td><td>Bonsai-27B on 8 GB: How I Fit a 27B LLM on an RTX 5060 Laptop</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">16</td><td>2026-07-24</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v16.0">v16.0</a></td><td>One Command, Text-to-Vertical-Video With Voiceover and Subtitles</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -99,6 +100,7 @@
   <div class="pipe"><h3>OpenMontage + Remotion <span class="badge badge-green">Runnable</span></h3><div class="meta">Orchestrator: ComfyUI API → Remotion VideoScene → final video · <b>0 API keys</b></div></div>
   <div class="pipe"><h3>ChatTTS <span class="badge badge-green">Runnable</span></h3><div class="meta">Local Chinese TTS · <b>RTF 0.88</b> · Chinese natural · ~6s/seg</div></div>
   <div class="pipe"><h3>Bonsai-27B (ternary GGUF) <span class="badge badge-green">Runnable</span></h3><div class="meta">Private 27B on 8 GB · <b>Q1_0: 34.5 t/s, 3.6 GB</b> · PrismML llama.cpp fork + CUDA 13.3</div></div>
+  <div class="pipe"><h3>TTS+STT+FFmpeg Pipeline <span class="badge badge-green">Runnable</span></h3><div class="meta">Text-to-vertical-video · <b>~30s / 1080×1920</b> · IndexTTS2 (RTF 0.70) + FunASR (RTF 0.08)</div></div>
 </div>
 
 <h2>📅 Timeline</h2>
@@ -118,6 +120,7 @@
   <li><span class="t-date">2026-07-20</span><br><span class="t-tag">v13.0</span> Z-Image Turbo: 4 vs 20 steps — is the distillation actually converging?</li>
   <li><span class="t-date">2026-07-22</span><br><span class="t-tag">v14.0</span> Local LLM Benchmark: five models, six tests — fastest model (Gemma-4-12B, 40.9 t/s) matches largest model (Qwen3.6-35B, 19 t/s) on capability</li>
   <li><span class="t-date">2026-07-24</span><br><span class="t-tag">v15.0</span> Bonsai-27B: a 27B LLM on 8 GB — ternary Q1_0 (3.6 GB), PrismML fork, 34.5 t/s on Blackwell sm_120</li>
+  <li><span class="t-date">2026-07-24</span><br><span class="t-tag">v16.0</span> Text-to-vertical-video: IndexTTS2 (RTF 0.70) → FunASR (RTF 0.08) → FFmpeg — one command, ~30s to 1080×1920 MP4 with voiceover and burned-in subtitles</li>
 </ul>
 
 <h2>📖 About</h2>
