@@ -54,7 +54,7 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>17</b> releases</div>
+    <div class="stat"><b>18</b> releases</div>
     <div class="stat"><b>14</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
@@ -84,6 +84,7 @@
     <tr><td class="num">15</td><td>2026-07-24</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v15.0">v15.0</a></td><td>Bonsai-27B on 8 GB: How I Fit a 27B LLM on an RTX 5060 Laptop</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">16</td><td>2026-07-24</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v16.0">v16.0</a></td><td>One Command, Text-to-Vertical-Video With Voiceover and Subtitles</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">17</td><td>2026-07-28</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v17.0">v17.0</a></td><td>Full Chain v17.0: 300 Characters to a 40-Second Vertical Video</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">18</td><td>2026-07-28</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v18.0">v18.0</a></td><td>FunASR English-Word Whitelist: The Subtitle Fix full_chain.py Was Missing</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -124,6 +125,7 @@
   <li><span class="t-date">2026-07-24</span><br><span class="t-tag">v15.0</span> Bonsai-27B: a 27B LLM on 8 GB — ternary Q1_0 (3.6 GB), PrismML fork, 34.5 t/s on Blackwell sm_120</li>
   <li><span class="t-date">2026-07-24</span><br><span class="t-tag">v16.0</span> Text-to-vertical-video: IndexTTS2 (RTF 0.70) → FunASR (RTF 0.08) → FFmpeg — one command, ~30s to 1080×1920 MP4 with voiceover and burned-in subtitles</li>
   <li><span class="t-date">2026-07-28</span><br><span class="t-tag">v17.0</span> Full Chain v17.0: long scripts auto-split into segments, composed individually, concatenated — 300 characters in, 40-second 1080×1920 video out. Background fix: LTX-2B video → Z-Image Turbo still.</li>
+  <li><span class="t-date">2026-07-28</span><br><span class="t-tag">v18.0</span> FunASR paraformer-zh mis-transcribes English words (DeepSeek→迪普搜索, C U D A→CUDA) — append-only post-processor whitelist in full_chain.py, 45 lines, 17 unit tests.</li>
 </ul>
 
 <h2>📖 About</h2>
