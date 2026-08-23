@@ -54,8 +54,8 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>21</b> releases</div>
-    <div class="stat"><b>15</b> pipelines documented</div>
+    <div class="stat"><b>22</b> releases</div>
+    <div class="stat"><b>16</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
   </div>
@@ -88,6 +88,7 @@
     <tr><td class="num">19</td><td>2026-08-16</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v19.0">v19.0</a></td><td>Gemma-4-12B-Instruct Q4_K_S on 8 GB: The Partial-Offload Gamble</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">20</td><td>2026-08-17</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v20.0">v20.0</a></td><td>Hermes Agent 0.20: The Herald Release — What Matters for a Local AI Pipeline</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">21</td><td>2026-08-18</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v21.0">v21.0</a></td><td>Qwen3.6-35B-A3B Uncensored on 8 GB: The MoE That Won The Sweet Spot — 5-model speed-vs-params chart</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">22</td><td>2026-08-23</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v22.0">v22.0</a></td><td>Krea2 fp8 + DyPE on 8 GB: 2048² in 135 Seconds, No Extra VRAM</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -108,6 +109,7 @@
   <div class="pipe"><h3>Bonsai-27B (ternary GGUF) <span class="badge badge-green">Runnable</span></h3><div class="meta">Private 27B on 8 GB · <b>Q1_0: 34.5 t/s, 3.6 GB</b> · PrismML llama.cpp fork + CUDA 13.3</div></div>
   <div class="pipe"><h3>TTS+STT+FFmpeg Pipeline <span class="badge badge-green">Runnable</span></h3><div class="meta">Text-to-vertical-video · <b>~30s / 1080×1920</b> · IndexTTS2 (RTF 0.70) + FunASR (RTF 0.08)</div></div>
   <div class="pipe"><h3>Full Chain v17.0 (long-script) <span class="badge badge-green">Runnable</span></h3><div class="meta">Long-script segmented video · <b>auto-split + concat</b> · Z-Image Turbo 1088×1600 static bg</div></div>
+  <div class="pipe"><h3>Krea2 fp8 + DyPE + SEGA <span class="badge badge-green">Runnable</span></h3><div class="meta">2048² on 8 GB · <b>DyPE latent extrapolation + SEGA attention</b> · 135s · no extra VRAM</div></div>
 </div>
 
 <h2>📅 Timeline</h2>
@@ -133,6 +135,7 @@
   <li><span class="t-date">2026-08-16</span><br><span class="t-tag">v19.0</span> Gemma-4-12B-Instruct Q4_K_S on 8 GB: full offload OOMs, mixed -ngl 28 holds at 10.1 t/s — 34/60 on ability tests</li>
   <li><span class="t-date">2026-08-17</span><br><span class="t-tag">v20.0</span> Hermes Agent 0.20 "The Herald": conversational voice with barge-in, signed webhooks, A2A v1.0, grounded citations — 3,650 commits, 647 contributors</li>
   <li><span class="t-date">2026-08-18</span><br><span class="t-tag">v21.0</span> Qwen3.6-35B-A3B Uncensored: --cpu-moe unlocks 30.79 t/s (was 19 t/s); Qwen3.8-27B challenger loses on speed (3.82 t/s, 8x slower) and long-form (CoT truncation) — 5-model speed-vs-params chart, MoE is the 8 GB sweet spot</li>
+  <li><span class="t-date">2026-08-23</span><br><span class="t-tag">v22.0</span> Krea2 fp8 + DyPE: latent-space position extrapolation breaks the 1024² ceiling — 2048×2048 in 135s on 8 GB, same VRAM as 1024². SEGA spectral attention adds quality. Six pitfalls documented (nvfp4 dead, CLIPLoader type='krea2', strength_model not strength).</li>
 </ul>
 
 <h2>📖 About</h2>
@@ -141,7 +144,7 @@ This site aggregates the <a href="https://github.com/Ultramanmao/ai-pipeline-loc
 </p>
 
 <footer>
-  <a href="https://github.com/Ultramanmao/ai-pipeline-local">github.com/Ultramanmao/ai-pipeline-local</a> · MIT License · Last updated 2026-08-18
+  <a href="https://github.com/Ultramanmao/ai-pipeline-local">github.com/Ultramanmao/ai-pipeline-local</a> · MIT License · Last updated 2026-08-23
 </footer>
 
 </div>
