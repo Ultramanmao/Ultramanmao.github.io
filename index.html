@@ -54,7 +54,7 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>28</b> releases</div>
+    <div class="stat"><b>29</b> releases</div>
     <div class="stat"><b>18</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
@@ -95,6 +95,7 @@
     <tr><td class="num">26</td><td>2026-09-08</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v28.0">v28.0</a></td><td>Three TTS Engines on 8 GB: Emotion Showdown — MegaTTS3 vs IndexTTS 2.5 vs CosyVoice2</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">27</td><td>2026-09-08</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v29.0">v29.0</a></td><td>From Script to Story — Building a 46-Second AI Short Film on 8 GB</td><td><span class="badge badge-green">Published + Video</span></td></tr>
     <tr><td class="num">28</td><td>2026-09-10</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v30.0">v30.0</a></td><td>120-Second AI Dance Video on 8GB GPU — Scaling Motion Context to 2 Minutes</td><td><span class="badge badge-green">Published + Video</span></td></tr>
+    <tr><td class="num">29</td><td>2026-09-12</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v31.0">v31.0</a></td><td>Three Post-Processing Tricks for H3 Video on 8 GB — What Works, What Doesn't</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -146,6 +147,7 @@
   <li><span class="t-date">2026-08-23</span><br><span class="t-tag">v22.0</span> Krea2 fp8 + DyPE: latent-space position extrapolation breaks the 1024² ceiling — 2048×2048 in 135s on 8 GB, same VRAM as 1024². SEGA spectral attention adds quality. Six pitfalls documented (nvfp4 dead, CLIPLoader type='krea2', strength_model not strength).</li>
   <li><span class="t-date">2026-08-29</span><br><span class="t-tag">v25.0</span> MiniMax H3 on 8 GB: 33 GB of models in 8 GB VRAM — W4A8 diffusion + NVFP4 32B encoder with CPU offloading. Joint video + stereo audio generation. 4B encoder dimension trap (2560≠5120), Block Cache useless for Turbo, 125-frame sweet spot. 14 min for 5.9s 1344×768 clip.</li>
   <li><span class="t-date">2026-08-31</span><br><span class="t-tag">v26.0</span> H3 Motion Context: 40-second continuous video on 8 GB — 8 clips chained via latent transfer, no decode/re-encode, no color drift. Turbo LoRA incompatible (destroys chain continuity), 20-step beta sampling required. context_length=22 is the sweet spot.</li>
+  <li><span class="t-date">2026-09-12</span><br><span class="t-tag">v31.0</span> Three post-processing tricks for H3 video: minterpolate smooths motion (+50% bitrate, CPU-only), ReActor preserves identity (SSIM 0.943), but neither fixes structural face deformation — that needs generation-time solutions.</li>
 </ul>
 
 <h2>📖 About</h2>
@@ -154,7 +156,7 @@ This site aggregates the <a href="https://github.com/Ultramanmao/ai-pipeline-loc
 </p>
 
 <footer>
-  <a href="https://github.com/Ultramanmao/ai-pipeline-local">github.com/Ultramanmao/ai-pipeline-local</a> · MIT License · Last updated 2026-08-31
+  <a href="https://github.com/Ultramanmao/ai-pipeline-local">github.com/Ultramanmao/ai-pipeline-local</a> · MIT License · Last updated 2026-09-12
 </footer>
 
 </div>
