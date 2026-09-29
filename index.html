@@ -54,8 +54,8 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>36</b> releases</div>
-    <div class="stat"><b>19</b> pipelines documented</div>
+    <div class="stat"><b>37</b> releases</div>
+    <div class="stat"><b>20</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
   </div>
@@ -103,6 +103,7 @@
     <tr><td class="num">34</td><td>2026-09-23</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v34.0">v34.0</a></td><td>Ternary vs MoE on 8 GB: Bonsai 2 27B vs Qwen3.6-35B — Same Score, 3.6× Smaller</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">35</td><td>2026-09-25</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v35.0">v35.0</a></td><td>Qwen-Image 2.1 on 8 GB: Transparent PNG, 2K in 60 Seconds, and the Green-Noise Scheduler Trap</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">36</td><td>2026-09-29</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v36.0">v36.0</a></td><td>MTP Speculative Decoding on 8 GB: 45 Runs, +19% to −26%, Acceptance Rate Is Everything</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">37</td><td>2026-09-29</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v37.0">v37.0</a></td><td>Qwen3.8-Flash-Next 177B on an 8 GB Laptop: 72.5 GB of Weights, 6.11 t/s, and No 1-Bit Collapse</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -121,6 +122,7 @@
   <div class="pipe"><h3>ChatTTS <span class="badge badge-green">Runnable</span></h3><div class="meta">Local Chinese TTS · <b>RTF 0.88</b> · Chinese natural · ~6s/seg</div></div>
   <div class="pipe"><h3>Qwen3.6-35B-A3B Uncensored <span class="badge badge-green">Runnable</span></h3><div class="meta">8 GB LLM sweet spot · <b>MoE, --cpu-moe: 30.79 t/s</b> · 58/60 capability · 8 GB VRAM</div></div>
   <div class="pipe"><h3>Bonsai-27B (ternary GGUF) <span class="badge badge-green">Runnable</span></h3><div class="meta">Private 27B on 8 GB · <b>Q1_0: 34.5 t/s, 3.6 GB</b> · PrismML llama.cpp fork + CUDA 13.3</div></div>
+  <div class="pipe"><h3>Qwen3.8-Flash-Next 177B (UD-IQ1_S) <span class="badge badge-green">Runnable</span></h3><div class="meta">72.5 GB model on 8 GB laptop · <b>6.11 t/s at ngl8, 56/60 ability</b> · pagefile 16–96 GB, commit-limit myth busted</div></div>
   <div class="pipe"><h3>TTS+STT+FFmpeg Pipeline <span class="badge badge-green">Runnable</span></h3><div class="meta">Text-to-vertical-video · <b>~30s / 1080×1920</b> · IndexTTS2 (RTF 0.70) + FunASR (RTF 0.08)</div></div>
   <div class="pipe"><h3>Full Chain v17.0 (long-script) <span class="badge badge-green">Runnable</span></h3><div class="meta">Long-script segmented video · <b>auto-split + concat</b> · Z-Image Turbo 1088×1600 static bg</div></div>
   <div class="pipe"><h3>Krea2 fp8 + DyPE + SEGA <span class="badge badge-green">Runnable</span></h3><div class="meta">2048² on 8 GB · <b>DyPE latent extrapolation + SEGA attention</b> · 135s · no extra VRAM</div></div>
@@ -171,6 +173,7 @@
   <li><span class="t-date">2026-09-23</span><br><span class="t-tag">v34.0</span> Ternary vs MoE: Bonsai 2 27B (1.72 bpw, 5.6 GB) vs Qwen3.6-35B MoE Q4_K_M (20 GB) — identical 27/30 scores and identical GSM8K failures; dense ternary wins the 8 GB tier on footprint (3.6× smaller, pure GPU). PQ2_0 6.8 GB "fits in 8 GB" OOM trap documented.</li>
   <li><span class="t-date">2026-09-25</span><br><span class="t-tag">v35.0</span> Qwen-Image 2.1: native transparent PNG with zero-error Chinese characters in one pass (no matting, no SAM); 2048² in 60.1s on 8 GB (6.5× speedup). The green-noise trap: hand-copied diffusers raw sigmas leave residual noise in ComfyUI — BasicScheduler fixes it. Research License caveat.</li>
   <li><span class="t-date">2026-09-29</span><br><span class="t-tag">v36.0</span> MTP speculative decoding on 8 GB: 45 timed runs on Qwen3.6-35B-A3B — the official 1.5–2× dies on CPU draft placement. Acceptance rate predicts everything: math/translation +7–19%, creative writing −11 to −26%. Quality provably unaffected (45 outputs). Keep it off by default, n-max 1 for mechanical text.</li>
+  <li><span class="t-date">2026-09-29</span><br><span class="t-tag">v37.0</span> Qwen3.8-Flash-Next 177B on an 8 GB laptop: 72.5 GB of weights at 6.11 t/s, 56/60 ability, zero digit hallucination in OCR — the 27B IQ1_S collapse did not repeat. Commit-limit bomb is a pagefile myth (probe walked to 105 GB). Pre-registered predictions hit 4/4. ngl sweet spot at 8 layers.</li>
 </ul>
 
 <h2>📖 About</h2>
