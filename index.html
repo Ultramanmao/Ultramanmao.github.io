@@ -54,7 +54,7 @@
   <h1>🧠 AI Pipeline Local <span>/ Ultramanmao</span></h1>
   <div class="sub">Reproducible local AI image &amp; video pipeline logs on an 8 GB RTX 5060 Laptop — Windows 11 native. Real results, real pitfalls.</div>
   <div class="stats">
-    <div class="stat"><b>39</b> releases</div>
+    <div class="stat"><b>40</b> releases</div>
     <div class="stat"><b>22</b> pipelines documented</div>
     <div class="stat"><b>3</b> GPU: RTX 5060 Laptop, 8 GB</div>
     <div class="stat">OS: <b>Windows 11</b> native · CUDA cu132</div>
@@ -106,6 +106,7 @@
     <tr><td class="num">37</td><td>2026-09-29</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v37.0">v37.0</a></td><td>Qwen3.8-Flash-Next 177B on an 8 GB Laptop: 72.5 GB of Weights, 6.11 t/s, and No 1-Bit Collapse</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">38</td><td>2026-10-04</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v38.0">v38.0</a></td><td>MiniMax-H3-X2-Detail-VAE on 8 GB: 2× Frames in +2 Seconds, and the Dark-Image Trap</td><td><span class="badge badge-green">Published</span></td></tr>
     <tr><td class="num">39</td><td>2026-10-04</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v39.0">v39.0</a></td><td>RefMod on 8 GB: A 9.5 KB Character Concept Scores 80.8% Where a Full Reference Image Scores 20%</td><td><span class="badge badge-green">Published</span></td></tr>
+    <tr><td class="num">40</td><td>2026-10-04</td><td><a href="https://github.com/Ultramanmao/ai-pipeline-local/releases/tag/v40.0">v40.0</a></td><td>Qwen3.8-Flash-Next 177B on 8 GB: 128K Context Holds, a 35K-Token Document Answers 3/3, and the 54-Minute First Token</td><td><span class="badge badge-green">Published</span></td></tr>
   </tbody>
 </table>
 
@@ -124,7 +125,7 @@
   <div class="pipe"><h3>ChatTTS <span class="badge badge-green">Runnable</span></h3><div class="meta">Local Chinese TTS · <b>RTF 0.88</b> · Chinese natural · ~6s/seg</div></div>
   <div class="pipe"><h3>Qwen3.6-35B-A3B Uncensored <span class="badge badge-green">Runnable</span></h3><div class="meta">8 GB LLM sweet spot · <b>MoE, --cpu-moe: 30.79 t/s</b> · 58/60 capability · 8 GB VRAM</div></div>
   <div class="pipe"><h3>Bonsai-27B (ternary GGUF) <span class="badge badge-green">Runnable</span></h3><div class="meta">Private 27B on 8 GB · <b>Q1_0: 34.5 t/s, 3.6 GB</b> · PrismML llama.cpp fork + CUDA 13.3</div></div>
-  <div class="pipe"><h3>Qwen3.8-Flash-Next 177B (UD-IQ1_S) <span class="badge badge-green">Runnable</span></h3><div class="meta">72.5 GB model on 8 GB laptop · <b>6.11 t/s at ngl8, 56/60 ability</b> · pagefile 16–96 GB, commit-limit myth busted</div></div>
+  <div class="pipe"><h3>Qwen3.8-Flash-Next 177B (UD-IQ1_S) <span class="badge badge-green">Runnable</span></h3><div class="meta">72.5 GB model on 8 GB laptop · <b>6.11 t/s at ngl8, 56/60 ability</b> · 128K context: −25.9% prefill, 3/3 on 35K-token doc (54-min TTFT, prefix cache → 3 min) · pagefile 16–96 GB, commit-limit myth busted</div></div>
   <div class="pipe"><h3>TTS+STT+FFmpeg Pipeline <span class="badge badge-green">Runnable</span></h3><div class="meta">Text-to-vertical-video · <b>~30s / 1080×1920</b> · IndexTTS2 (RTF 0.70) + FunASR (RTF 0.08)</div></div>
   <div class="pipe"><h3>Full Chain v17.0 (long-script) <span class="badge badge-green">Runnable</span></h3><div class="meta">Long-script segmented video · <b>auto-split + concat</b> · Z-Image Turbo 1088×1600 static bg</div></div>
   <div class="pipe"><h3>Krea2 fp8 + DyPE + SEGA <span class="badge badge-green">Runnable</span></h3><div class="meta">2048² on 8 GB · <b>DyPE latent extrapolation + SEGA attention</b> · 135s · no extra VRAM</div></div>
@@ -180,6 +181,7 @@
   <li><span class="t-date">2026-09-29</span><br><span class="t-tag">v37.0</span> Qwen3.8-Flash-Next 177B on an 8 GB laptop: 72.5 GB of weights at 6.11 t/s, 56/60 ability, zero digit hallucination in OCR — the 27B IQ1_S collapse did not repeat. Commit-limit bomb is a pagefile myth (probe walked to 105 GB). Pre-registered predictions hit 4/4. ngl sweet spot at 8 layers.</li>
   <li><span class="t-date">2026-10-04</span><br><span class="t-tag">v38.0</span> H3 X2-Detail-VAE: 2× frames at decode time — 1664×960 native for +2s vs 3–4min RealESRGAN (~100×), natural skin where SR gives plastic. First-frame enhancement +30–50% tail high-frequency at zero cost. Dark-image trap: strength 1.0 crushes dark composites (0.3 safe). Recipe: X2 decode + LatentSharpen 0.2.</li>
   <li><span class="t-date">2026-10-04</span><br><span class="t-tag">v39.0</span> RefMod character consistency shootout: 9.5 KB concept + styling prompt = 80.8% feature retention; native R2V reference with "reproduce exactly" = 20% (worst of four, below the no-reference baseline). Face is where reference authority ends. Accessories lost in 5/5 arms. curve_direction=constant, merge=True consensus extraction, camera-motion LoRA for arcs.</li>
+  <li><span class="t-date">2026-10-04</span><br><span class="t-tag">v40.0</span> 177B long context on 8 GB: 8K→128K prefill only −25.9% (linear-attention architecture pays off), 34.8K-token document answers 3/3 with answers locked before the test. Traps: bare /completion eats long docs (instant EOS after 50-min prefill — use chat template), cold first token = 54 min, prefix cache drops follow-ups to 3 min. KV-vs-dense claim marked unverified (no dense control).</li>
 </ul>
 
 <h2>📖 About</h2>
